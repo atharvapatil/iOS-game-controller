@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B42455E54ED4969D1412E41 /* Pods_game_controller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0D63C327C93F2A511006FF /* Pods_game_controller.framework */; };
 		FA3AB19C222DF71E00E52142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AB19B222DF71E00E52142 /* AppDelegate.swift */; };
 		FA3AB19E222DF71E00E52142 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3AB19D222DF71E00E52142 /* ViewController.swift */; };
 		FA3AB1A1222DF71E00E52142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3AB19F222DF71E00E52142 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DDB3ACFD4C1183AE4114A67 /* Pods-game-controller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game-controller.debug.xcconfig"; path = "Target Support Files/Pods-game-controller/Pods-game-controller.debug.xcconfig"; sourceTree = "<group>"; };
+		7ADE0ED2EFF1397635DCE266 /* Pods-game-controller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-game-controller.release.xcconfig"; path = "Target Support Files/Pods-game-controller/Pods-game-controller.release.xcconfig"; sourceTree = "<group>"; };
+		AE0D63C327C93F2A511006FF /* Pods_game_controller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_game_controller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3AB198222DF71E00E52142 /* game-controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3AB19B222DF71E00E52142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3AB19D222DF71E00E52142 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B42455E54ED4969D1412E41 /* Pods_game_controller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AB34C89C57A12667431FD90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE0D63C327C93F2A511006FF /* Pods_game_controller.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58F22E1C34EF1CE4854D012A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DDB3ACFD4C1183AE4114A67 /* Pods-game-controller.debug.xcconfig */,
+				7ADE0ED2EFF1397635DCE266 /* Pods-game-controller.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA3AB18F222DF71D00E52142 = {
 			isa = PBXGroup;
 			children = (
 				FA3AB19A222DF71E00E52142 /* game-controller */,
 				FA3AB199222DF71E00E52142 /* Products */,
+				58F22E1C34EF1CE4854D012A /* Pods */,
+				0AB34C89C57A12667431FD90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA3AB1AA222DF71F00E52142 /* Build configuration list for PBXNativeTarget "game-controller" */;
 			buildPhases = (
+				06338043AF95BD343040D7DE /* [CP] Check Pods Manifest.lock */,
 				FA3AB194222DF71E00E52142 /* Sources */,
 				FA3AB195222DF71E00E52142 /* Frameworks */,
 				FA3AB196222DF71E00E52142 /* Resources */,
+				1D1C5343AC74AD8AEFE39D20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06338043AF95BD343040D7DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-game-controller-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D1C5343AC74AD8AEFE39D20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-game-controller/Pods-game-controller-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-game-controller/Pods-game-controller-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA3AB194222DF71E00E52142 /* Sources */ = {
@@ -280,6 +354,7 @@
 		};
 		FA3AB1AB222DF71F00E52142 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DDB3ACFD4C1183AE4114A67 /* Pods-game-controller.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +373,7 @@
 		};
 		FA3AB1AC222DF71F00E52142 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ADE0ED2EFF1397635DCE266 /* Pods-game-controller.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
