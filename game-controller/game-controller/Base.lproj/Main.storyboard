@@ -50,6 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="directionLabel" destination="n05-Cs-cyj" id="eme-K4-Pop"/>
                         <outlet property="webView" destination="kzV-m7-3aY" id="0sE-LB-nVY"/>
                     </connections>
                 </viewController>
